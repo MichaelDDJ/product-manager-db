@@ -1,11 +1,24 @@
 package com.mikeyd.productmanagerdb;
 
 public class Product {
+    //Product properties
     private String name;
     private String type;
     private String place;
     private int year_acquired;
 
+    //Constructors
+    public Product() {
+    }
+
+    public Product(String name, String type, String place, int year_acquired) {
+        this.name = name;
+        this.type = type;
+        this.place = place;
+        this.year_acquired = year_acquired;
+    }
+
+    //Getters and Setters
     public String getName() {
         return name;
     }
@@ -34,7 +47,15 @@ public class Product {
         return year_acquired;
     }
 
-    public void setYear_acquired(int year_acquired) {
-        this.year_acquired = year_acquired;
+    public void setYear_acquired(int year_acquired) {this.year_acquired = year_acquired;}
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", place='" + place + '\'' +
+                ", year_acquired=" + year_acquired +
+                '}';
     }
 }
